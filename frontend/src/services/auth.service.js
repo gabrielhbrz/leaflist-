@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000/auth";
+const BASE_URL = `${import.meta.env.VITE_API_URL}/auth`;
 
 async function request(url, method, body) {
   const token = localStorage.getItem("token");

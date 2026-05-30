@@ -12,7 +12,10 @@ import tarefasRoutes from "./src/routes/tarefas.routes.js";
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://leaflist-production.up.railway.app",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   }),
 );
