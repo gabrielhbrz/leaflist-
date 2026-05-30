@@ -15,6 +15,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://leaflist-production.up.railway.app",
+      "https://leaflist.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   }),
