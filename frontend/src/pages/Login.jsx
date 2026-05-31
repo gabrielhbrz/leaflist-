@@ -15,16 +15,32 @@ export default function Login() {
     await login(email, senha);
   }
 
+  const features = [
+    {
+      icon: <Grid3x3 size={14} />,
+      titulo: "Pendentes e concluídas separadas",
+      desc: "Visualize seu progresso em tempo real",
+    },
+    {
+      icon: <Flag size={14} />,
+      titulo: "Prioridade por tarefa",
+      desc: "Baixa, média ou alta — você decide o foco",
+    },
+    {
+      icon: <Lock size={14} />,
+      titulo: "Dados privados e seguros",
+      desc: "Cada conta acessa apenas suas próprias tarefas",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
       <div className="w-full max-w-3xl bg-white rounded-2xl overflow-hidden border border-gray-200">
-        <div className="grid grid-cols-2 min-h-130">
-          <div className="bg-green-800 p-12 flex flex-col justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-2 min-h-130">
+          <div className="hidden md:flex bg-green-800 p-12 flex-col justify-between">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                <span className="text-green-800 text-sm font-bold p-2">
-                  <Leaf size={18} />
-                </span>
+                <Leaf size={18} className="text-green-800" />
               </div>
               <span className="text-white font-medium text-lg">LeafList</span>
             </div>
@@ -39,25 +55,9 @@ export default function Login() {
               </p>
 
               <div className="flex flex-col gap-4">
-                {[
-                  {
-                    icon: <Grid3x3 size={14} />,
-                    titulo: "Pendentes e concluídas separadas",
-                    desc: "Visualize seu progresso em tempo real",
-                  },
-                  {
-                    icon: <Flag size={14} />,
-                    titulo: "Prioridade por tarefa",
-                    desc: "Baixa, média ou alta — você decide o foco",
-                  },
-                  {
-                    icon: <Lock size={14} />,
-                    titulo: "Dados privados e seguros",
-                    desc: "Cada conta acessa apenas suas próprias tarefas",
-                  },
-                ].map((f) => (
+                {features.map((f) => (
                   <div key={f.titulo} className="flex items-start gap-3">
-                    <div className="w-7 h-7 bg-white/20 rounded-md flex items-center justify-center shrink-0 mt-0.5 text-white text-xs">
+                    <div className="w-7 h-7 bg-white/20 rounded-md flex items-center justify-center shrink-0 mt-0.5 text-white">
                       {f.icon}
                     </div>
                     <div>
@@ -76,7 +76,7 @@ export default function Login() {
             </p>
           </div>
 
-          <div className="p-12 flex flex-col justify-center">
+          <div className="p-8 md:p-12 flex flex-col justify-center">
             <h2 className="text-xl font-medium text-gray-900 mb-1">
               Entrar na sua conta
             </h2>

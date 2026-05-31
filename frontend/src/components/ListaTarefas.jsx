@@ -9,7 +9,7 @@ export default function ListaTarefas() {
   const concluidas = tarefas.filter((t) => t.concluido);
 
   return (
-    <div className="grid grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
       <div className="bg-white rounded-xl border border-gray-200 p-4">
         <div className="flex items-center gap-2 mb-3">
           <span className="text-gray-400">○</span>

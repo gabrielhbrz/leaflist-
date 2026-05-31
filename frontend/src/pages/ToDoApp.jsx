@@ -40,18 +40,20 @@ export default function ToDoApp() {
           <span className="font-semibold text-green-700">LeafList</span>
         </div>
 
-        <div className="flex items-center gap-4">
-          <span className="text-sm text-gray-500">Olá, {usuario?.nome}</span>
+        <div className="flex items-center gap-2 lg:gap-4">
+          <span className="hidden sm:block text-sm text-gray-500">
+            Olá, {usuario?.nome}
+          </span>
           <button
             onClick={() => navigate("/configuracoes")}
-            className="flex items-center gap-1.5 text-sm cursor-pointer text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition-colors"
+            className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 px-2 lg:px-3 py-1.5 rounded-lg transition-colors"
           >
             <Settings size={14} />
-            Configurações
+            <span className="hidden sm:block">Configurações</span>
           </button>
           <button
             onClick={logout}
-            className="text-sm text-gray-500 cursor-pointer hover:text-gray-900 transition-colors"
+            className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
           >
             Logout
           </button>

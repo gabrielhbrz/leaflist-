@@ -65,18 +65,16 @@ export default function ItemTarefa({ tarefa, deletar, completar, editar }) {
           <p className="text-xs text-gray-400 mt-1">{dataFormatada}</p>
         </div>
 
-        <div className="flex items-center gap-1 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="flex items-center gap-1 shrink-0 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
           <button
             onClick={() => editar()}
             className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-md transition-colors cursor-pointer"
-            title="Editar"
           >
             <Pencil size={16} />
           </button>
           <button
             onClick={() => deletar()}
             className="p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-md transition-colors cursor-pointer"
-            title="Deletar"
           >
             <Trash2 size={16} />
           </button>

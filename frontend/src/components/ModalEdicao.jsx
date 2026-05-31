@@ -23,7 +23,7 @@ export default function ModalEdicao({ tarefa, salvar, fechar }) {
       onClick={fechar}
     >
       <div
-        className="bg-white rounded-xl shadow-xl w-full max-w-md p-6 flex flex-col gap-4"
+        className="bg-white rounded-xl shadow-xl w-full max-w-md p-4 sm:p-6 flex flex-col gap-4 mx-4 sm:mx-0"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between">
@@ -67,7 +67,7 @@ export default function ModalEdicao({ tarefa, salvar, fechar }) {
             <select
               value={prioridade}
               onChange={(e) => setPrioridade(e.target.value)}
-              className="border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-700"
+              className="border border-gray-200 rounded-md px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-green-700"
             >
               <option value="baixa">Baixa</option>
               <option value="media">Média</option>

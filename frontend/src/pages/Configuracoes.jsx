@@ -75,7 +75,7 @@ export default function Configuracoes() {
         </div>
       </header>
 
-      <main className="max-w-2xl mx-auto px-6 py-8 flex flex-col gap-6">
+      <main className="max-w-2xl mx-auto px-4 sm:px-6 py-6 sm:py-8 flex flex-col gap-6">
         <div>
           <h1 className="text-xl font-medium text-gray-900 mb-1">
             Configurações
@@ -97,13 +97,16 @@ export default function Configuracoes() {
         )}
 
         <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-          <div className="px-5 py-4 border-b border-gray-200">
+          <div className="px-4 sm:px-5 py-4 border-b border-gray-200">
             <p className="text-sm font-medium text-gray-900">Dados pessoais</p>
             <p className="text-xs text-gray-500 mt-0.5">
               Nome e email da sua conta
             </p>
           </div>
-          <form onSubmit={handlePerfil} className="p-5 flex flex-col gap-4">
+          <form
+            onSubmit={handlePerfil}
+            className="p-4 sm:p-5 flex flex-col gap-4"
+          >
             <div className="flex flex-col gap-1.5">
               <label className="text-sm font-medium text-gray-700">Nome</label>
               <input
@@ -135,13 +138,16 @@ export default function Configuracoes() {
         </div>
 
         <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-          <div className="px-5 py-4 border-b border-gray-200">
+          <div className="px-4 sm:px-5 py-4 border-b border-gray-200">
             <p className="text-sm font-medium text-gray-900">Segurança</p>
             <p className="text-xs text-gray-500 mt-0.5">
               Altere sua senha de acesso
             </p>
           </div>
-          <form onSubmit={handleSenha} className="p-5 flex flex-col gap-4">
+          <form
+            onSubmit={handleSenha}
+            className="p-4 sm:p-5 flex flex-col gap-4"
+          >
             <div className="flex flex-col gap-1.5">
               <label className="text-sm font-medium text-gray-700">
                 Senha atual

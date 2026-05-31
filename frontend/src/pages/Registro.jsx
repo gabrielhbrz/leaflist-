@@ -61,7 +61,7 @@ export default function Registro() {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-3 w-full max-w-2xl mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-2xl mb-6">
         {beneficios.map((b) => (
           <div
             key={b.titulo}
