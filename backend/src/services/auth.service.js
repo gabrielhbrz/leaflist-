@@ -11,7 +11,6 @@ export async function registrar({ nome, email, senha }) {
     return { erro: "EMAIL_EXISTENTE" };
   }
 
-  // o número 10 é o "cost factor" — quanto maior, mais seguro e mais lento
   const senhaHash = await bcrypt.hash(senha, 10);
 
   const usuario = await prisma.usuario.create({
