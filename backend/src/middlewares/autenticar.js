@@ -15,6 +15,7 @@ export function autenticar(req, res, next) {
     req.usuario = payload;
     next();
   } catch (err) {
+    console.error("DEBUG JWT:", err.message);
     return res.status(401).json({ erro: "Token inválido ou expirado" });
   }
 }
